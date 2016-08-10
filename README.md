@@ -14,6 +14,18 @@ modify insert a `provider "aws"` block in there:
 - `$ terraform apply`
 
 
+Viewing/Refreshing the Graph
+------
+
+The included `out.png` file was generated like so:
+
+```
+$ terraform plan -out create.tfplan
+$ terraform graph create.tfplan | dot -Tpng > out.png
+```
+
+It assumes you have `dot` installed. 
+
 Authors
 =======
 
